@@ -1,19 +1,30 @@
+from heapq import *
+
+def merge(arr , temp , n):
+    temp.sort()
+    q = []
+
+    for i in  range(n):
+        heappush(q , [arr[i] + temp[0] , i , 0])
+
+    result = []
+    for _ in range(n):
+        count , i , j = heappop(q)
+        result.append(count)
+        if j + 1 < n:
+            heappush(q , [arr[i]+temp[j+1] , i , j+1])
+
+    return result
+
 def main():
     while True:
         try:
             n = int(input())
-            arr = []
-            total = 0
-            for i in range(n):
+            arr = sorted(list(map(int , input().split())))
+            for i in range(n-1):
                 temp = sorted(list(map(int , input().split())))
-                total += temp[0]
-                arr.append(temp[1]-temp[0])
+                arr = merge(arr , temp , n)
+            print(*arr)
         except EOFError:break
-        print(f"{total}" , end='')
-        arr = sorted(arr)
-        for i in range(n-1):
-            print(f" {total+arr[i]}" , end='')
-        print()
-
 if __name__ == "__main__":
     main()
