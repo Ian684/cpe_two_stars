@@ -1,5 +1,5 @@
 n = int(input())
-for i in range(n):
+for _ in range(n):
     m = int(input())
     arr = []
     brr = []
@@ -14,6 +14,6 @@ for i in range(n):
             j -= 1
         else:
             i -= 1
-    for j in range(j , -1 , -1):
-        print(brr[j])
-    if i != n - 1:print()
+    for c in range(j , -1 , -1):
+        print(brr[c])
+    if _ != n - 1:print()
