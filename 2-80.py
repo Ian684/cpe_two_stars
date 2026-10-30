@@ -16,4 +16,4 @@ for _ in range(n):
             i -= 1
     for c in range(j , -1 , -1):
         print(brr[c])
-    if _ != n - 1:print()
+    print()
