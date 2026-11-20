@@ -2,6 +2,9 @@
 
 Python solutions for CPE two-star programming problems. This repository is used to practice algorithmic problem solving, UVa-style input/output handling, and competitive programming techniques.
 
+See [INDEX.md](INDEX.md) for the file counts, naming conventions, and review
+workflow.
+
 The problem list is based on the CPE Level 2 reference list:
 
 - https://yuihuang.com/cpe-level-2/
